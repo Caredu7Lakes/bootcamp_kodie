@@ -1,0 +1,14 @@
+/* Reset básico: remove margens/paddings padrão e usa box-sizing previsível.
+   box-sizing: border-box faz padding/border entrarem na largura do elemento,
+   ajudando a evitar rolagem horizontal indesejada. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background-color: #f9fafb; /* fundo claro de e-commerce */
+  color: #111827;
+}

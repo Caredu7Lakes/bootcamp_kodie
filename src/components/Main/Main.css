@@ -1,0 +1,66 @@
+/* Grid responsivo: colunas que se ajustam sozinhas ao tamanho da tela.
+   auto-fill + minmax(260px, 1fr) => cada card tem no mínimo 260px;
+   o navegador encaixa quantas colunas couberem, sem rolagem horizontal. */
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;              /* espaço entre os cards */
+  padding: 2rem;           /* margem interna da área de conteúdo */
+  max-width: 1280px;       /* limita a largura em telas muito grandes */
+  margin: 0 auto;          /* centraliza o grid horizontalmente */
+}
+
+/* Card de produto. */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;           /* organiza o conteúdo do card em coluna */
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* animação suave no hover */
+}
+
+/* Leve elevação ao passar o mouse -> sensação de e-commerce moderno. */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagem do produto: object-fit: contain mantém a proporção sem cortar. */
+.card__image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.card__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+  min-height: 2.5em; /* alinha os cards mesmo com títulos de tamanhos diferentes */
+}
+
+.card__price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2563eb; /* azul de destaque para o preço */
+  margin: 0;
+}
+
+.card__description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Ajuste fino para smartphones: reduz o espaçamento em telas estreitas. */
+@media (max-width: 480px) {
+  .main {
+    padding: 1rem;
+    gap: 1rem;
+  }
+}

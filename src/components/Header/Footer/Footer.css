@@ -1,0 +1,13 @@
+/* Rodapé escuro, centralizado, ocupando toda a largura. */
+.footer {
+  background-color: #111827;
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 2rem; /* separa o rodapé do conteúdo acima */
+}
+
+.footer__text {
+  color: #9ca3af; /* cinza claro, discreto */
+  font-size: 0.875rem;
+  margin: 0;
+}
